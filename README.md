@@ -37,5 +37,5 @@ This is a full-stack backend microservices project built using Java, Spring Boot
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-repo/health-monitoring-system.git
-cd health-monitoring-system
+git clone https://github.com/your-repo/healthtrack.git
+cd healthtrack
