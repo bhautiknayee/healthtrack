@@ -6,4 +6,6 @@ import org.springframework.http.ResponseEntity;
 
 public interface PatientService {
     ResponseEntity<PatientResponseDto> create(PatientRequestDTO patientRequestDTO);
+
+    boolean existsById(String id);
 }

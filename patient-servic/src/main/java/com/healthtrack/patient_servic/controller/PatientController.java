@@ -26,4 +26,10 @@ public class PatientController {
         return patientService.create(patientRequestDTO);
     }
 
+    @GetMapping("/validate/{id}")
+    public ResponseEntity<Boolean> validatePatientId(@PathVariable String id) {
+        boolean exists = patientService.existsById(id);
+        return ResponseEntity.ok(exists);
+    }
+
 }

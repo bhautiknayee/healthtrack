@@ -34,4 +34,9 @@ public class PatientServiceImpl implements PatientService {
         return ResponseEntity.ok(responseDto);
     }
 
+    @Override
+    public boolean existsById(String id) {
+        return patientRepository.existsById(id);
+    }
+
 }

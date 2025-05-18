@@ -1,29 +1,23 @@
-# Application Basic Config
 spring:
   application:
     name: patient-service
 
-  # MongoDB Configuration
-  data:
-    mongodb:
-      uri: mongodb+srv://nayeebhautik:mwhCiZQrsLv2NnWh@cluster0.8z3mt.mongodb.net/healthtrack?retryWrites=true&w=majority&appName=Cluster0
-      database: healthtrack  # (Optional if specified in URI)
-      auto-index-creation: true
+  spring:
+    data:
+      mongodb:
+        uri: mongodb+srv://nayeebhautik:mwhCiZQrsLv2NnWh@cluster0.8z3mt.mongodb.net/healthtrack?retryWrites=true&w=majority&appName=Cluster0
 
-  # Disable SQL Autoconfig (since we're using MongoDB)
+  main:
+    allow-circular-references: true
+
   autoconfigure:
     exclude:
       - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
       - org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration
 
-  # Allow circular references in entities
-  main:
-    allow-circular-references: true
-
-# Server Config
 server:
-  port: 8080
-# Logging Config
+  port: 8081
+
 logging:
   level:
     org.springframework.data.mongodb: DEBUG
@@ -32,8 +26,3 @@ logging:
     name: logs/app.log
   pattern:
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
-
-# Activate profiles if needed
-# spring:
-#   profiles:
-#     active: dev
