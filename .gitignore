@@ -1,0 +1,31 @@
+# Ignore build directories
+/target/
+/build/
+
+# Ignore logs
+logs/
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.iml
+
+# Ignore Maven wrapper files
+.mvn/wrapper/maven-wrapper.jar
+
+# Ignore Spring Boot files
+spring-boot-app.jar
+
+# Ignore environment files
+.env
+
+# Ignore gitignore itself if needed (usually not)
