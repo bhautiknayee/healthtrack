@@ -2,10 +2,9 @@ spring:
   application:
     name: patient-service
 
-  spring:
-    data:
-      mongodb:
-        uri: mongodb+srv://nayeebhautik:mwhCiZQrsLv2NnWh@cluster0.8z3mt.mongodb.net/healthtrack?retryWrites=true&w=majority&appName=Cluster0
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
 
   main:
     allow-circular-references: true
